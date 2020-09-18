@@ -35,7 +35,7 @@ export default function Profile() {
         },
       });
 
-      setIncidents(incidents.filter(incident => incident.id !== id))
+      setIncidents(incidents.filter((incident) => incident.id !== id));
     } catch (error) {
       alert("Erro ao deletar caso, tente novamente.");
     }
@@ -43,7 +43,7 @@ export default function Profile() {
 
   function handleLogout() {
     localStorage.clear();
-    history.push('/');
+    history.push("/");
   }
 
   return (
@@ -79,7 +79,10 @@ export default function Profile() {
               }).format(incident.value)}
             </p>
 
-            <button onClick={() => handleDeleteIncident(incident.id)} type="button">
+            <button
+              onClick={() => handleDeleteIncident(incident.id)}
+              type="button"
+            >
               <FiTrash2 size={20} color="#a8a8b3" />
             </button>
           </li>
